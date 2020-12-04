@@ -15,7 +15,7 @@ import { SpeechRecognizerService } from '../shared/services/web-apis/speech-reco
 export class WebSpeechComponent implements OnInit {
   languages: string[] = languages;
   currentLanguage: string = defaultLanguage; //Set the default language
-  totalTranscript!: string; // The variable to accumulate all the recognized texts
+  totalTranscript?: string; // The variable to accumulate all the recognized texts
 
   transcript$!: Observable<string>; // Shows the transcript in "real-time"
   listening$!: Observable<boolean>; // Changes to 'true'/'false' when the recognizer starts/stops
