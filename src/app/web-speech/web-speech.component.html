@@ -24,16 +24,14 @@
 <section *ngIf="transcript$ | async">
   <mat-card class="notification mat-elevation-z4">{{transcript$ | async}}</mat-card>
 </section>
-<section>
+<!-- <section>
   <mat-form-field class="speech-result-width">
     <textarea matInput [value]="totalTranscript || ''" placeholder="Speech Input Result" rows="20" disabled="true"></textarea>
   </mat-form-field>
-</section>
-
-
-<!-- <section>
-<script src="ckeditor/ckeditor.js"></script>
-<script>
-  CKEDITOR.replace('content');
-</script>
 </section> -->
+
+<section>
+<ckeditor
+  [(ngModel)]="totalTranscript">
+</ckeditor>
+</section>

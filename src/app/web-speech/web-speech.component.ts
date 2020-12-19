@@ -32,6 +32,8 @@ export class WebSpeechComponent implements OnInit {
     this.initRecognition();
   }
 
+  ckeditorContent: any;
+
   start(): void {
     if (this.speechRecognizer.isListening) {
       this.stop();
